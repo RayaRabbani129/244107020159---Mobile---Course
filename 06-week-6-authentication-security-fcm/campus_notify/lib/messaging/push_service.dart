@@ -45,7 +45,7 @@ Future<void> initFcmToken({required Future<void> Function(String token) onToken}
 
   FirebaseMessaging.instance.onTokenRefresh.listen(onToken);
   await FirebaseMessaging.instance.subscribeToTopic('pengumuman-kampus');
-}
+
 
 // 5. Handler Foreground (Praktikum 3)
 void listenForeground(void Function(String route) go) {
